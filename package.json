@@ -5,7 +5,9 @@
   "repository": "facebook/mention-bot",
   "scripts": {
     "test": "flow && jest",
-    "start": "node run-server.js"
+    "start": "node run-server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "./run-mention-bot.js",
   "engines": {
@@ -34,6 +36,8 @@
     "jest-cli": "^0.7.1",
     "jsonlint": "^1.6.2",
     "minimatch": "^3.0.0",
-    "node-schedule": "^1.0.0"
-  }
+    "node-schedule": "^1.0.0",
+    "snyk": "^1.190.0"
+  },
+  "snyk": true
 }
